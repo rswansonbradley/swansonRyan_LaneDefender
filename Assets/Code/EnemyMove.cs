@@ -10,10 +10,11 @@ public class EnemyMove : MonoBehaviour
     public AudioClip dieAudio;
     public AudioClip hitAudio;
     public AudioSource gameSource;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,12 +27,14 @@ public class EnemyMove : MonoBehaviour
             gameSource.Play();
             isHit = true;
             eHp = -1;
+            anim.SetTrigger("die");
             Invoke("Remove", 0.45f);
         }
 
         if (!isHit)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
+            float ha = transform.position.y;
         }
 
         if (GlobalHealth.gameHp < 1)
@@ -58,12 +61,13 @@ public class EnemyMove : MonoBehaviour
             }
             else
             {
+                anim.SetTrigger("gotHit");
                 gameSource.clip = hitAudio;
                 gameSource.volume = .4f;
                 gameSource.Play();
             }
             isHit = true;
-            Invoke("Stun", 0.2f);
+            Invoke("Stun", 0.4f);
         }
 
         if (collision.gameObject.tag == "Player")

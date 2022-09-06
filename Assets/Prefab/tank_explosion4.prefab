@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5024203810321248666}
   - component: {fileID: 7686739977839550520}
   - component: {fileID: 3039382794290244146}
+  - component: {fileID: 4798043043652327053}
   m_Layer: 0
   m_Name: tank_explosion4
   m_TagString: Untagged
@@ -97,3 +98,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f70c665e9eeeee4ca26d6ce8118e575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4798043043652327053
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235149686028403295}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 205afe0c0a81ec548abac032edc0797e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
